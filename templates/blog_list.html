@@ -1,10 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
 Blog List:
 <br>
 {% for post in posts %}
-    <a href="{% url 'blog:detail' post.id %}">{{post.title}}</a>
-    <a href="{% url 'blog:update' post.id %}">Update</a>
-    <a href="{% url 'blog:delete' post.id %}">Delete</a>
+    <a class="hover:text-blue-300" href="{% url 'blog:detail' post.id %}">{{post.title}}</a>
+    <a class="text-blue-700 hover:text-blue-500" href="{% url 'blog:update' post.id %}">Update</a>
+    <a class="text-red-700 hover:text-red-500" href="{% url 'blog:delete' post.id %}">Delete</a>
     <br>
 {% endfor %}
 <br>
-<a href={% url 'blog:create' %}>Create post</a>
+<a class="text-green-700 hover:text-green-500" href={% url 'blog:create' %}>Create post</a>
+{% endblock content %}
