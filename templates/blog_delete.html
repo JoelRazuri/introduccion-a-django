@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
 Are you sure to delete the post?
 <br><br>
 <form method="POST">
@@ -5,3 +8,4 @@ Are you sure to delete the post?
     {{form}}
     <button type="submit">Delete</button>
 </form>
+{% endblock content %}

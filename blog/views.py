@@ -45,7 +45,7 @@ class BlogCreateView(View):
     
 
 class BlogDetailView(View):
-    def get(self, request, pk,*args, **kwargs):
+    def get(self, request, pk, *args, **kwargs):
         post = get_object_or_404(Post, pk=pk)
         
         context = {
